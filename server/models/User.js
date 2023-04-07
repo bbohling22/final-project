@@ -25,7 +25,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
-    // batch: [Batch.schema]
+    batches: [Batch.schema]
 });
 
 userSchema.pre('save', async function(next) {
