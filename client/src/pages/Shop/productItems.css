@@ -1,0 +1,12 @@
+.columns{
+    display: flex;
+    justify-content: center;
+    
+}
+.column{align-items: start;
+    
+}
+/* .card {
+    height: px;
+    max-width: 30%;
+} */
