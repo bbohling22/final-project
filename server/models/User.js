@@ -5,15 +5,9 @@ const bcrypt = require('bcrypt');
 // const Batch = require('./Batch');
 
 const userSchema = new Schema({
-    firstName: {
+    username: {
         type: String,
-        required: true,
-        trim: true  
-    },
-    lastName: {
-        type: String,
-        required: true,
-        trim: true
+        required: true
     },
     email: {
         type: String,
