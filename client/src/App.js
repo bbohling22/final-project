@@ -1,8 +1,14 @@
-import './index.css';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/navbar";
-import { Login } from "./pages/Login";
-import { Signup } from "./pages/Signup"
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup"
+import Home from "./pages/Home/Home"
+import Create from "./pages/Create/Create"
+
+
+
+
 
 
 function App() {
@@ -12,10 +18,12 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Shop />}/>
+          
+          <Route path="/Home" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/cart" element={<Cart />}/>
+          <Route path="/Create" element={<Create />} />
+          
         </Routes>
 
       </Router>
