@@ -2,7 +2,7 @@
 
 const Create = () => {
     return (
-        <div>login</div>
+        <div>Create</div>
     )
 }
 

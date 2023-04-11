@@ -1,8 +1,8 @@
-import React from "react";
+
 
 const Signup = () => {
     return (
-        <div>login</div>
+        <div>Signup</div>
     )
 }
 
