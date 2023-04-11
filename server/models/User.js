@@ -25,7 +25,6 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
-    batches: [Batch.schema]
 });
 
 userSchema.pre('save', async function(next) {
@@ -41,3 +40,4 @@ const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 
+ 

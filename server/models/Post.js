@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+// const dateFormat = require('../utils/dateFormat');
 
 const postSchema = new Schema({
   postText: {
@@ -12,7 +12,7 @@ const postSchema = new Schema({
   postImage: {
     type: String,
     required: true
-  }
+  },
   postAuthor: {
     type: String,
     required: true,
