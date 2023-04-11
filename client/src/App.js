@@ -1,9 +1,7 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
-import { Shop } from "./pages/Shop";
 import { Login } from "./pages/Login";
-import { Cart } from "./pages/Cart";
 import { Signup } from "./pages/Signup"
 
 
