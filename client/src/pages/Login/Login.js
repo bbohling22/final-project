@@ -1,8 +1,10 @@
-
+import LoginForm from "../../components/LoginForm";
 
 const Login = () => {
     return (
-        <div>login</div>
+        <div className="has-background-primary-dark">
+            <LoginForm/>
+        </div>
     )
 }
 

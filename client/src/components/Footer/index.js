@@ -4,7 +4,7 @@
 
 const Footer = () => {
     return(
-        <footer class="footer">
+        <footer class="footer mt-auto">
             <div class="content has-text-centered">
                 <p>
                 <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
