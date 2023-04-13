@@ -1,4 +1,5 @@
 const db = require('../config/connection');
+
 const { User } = require('../models');
 const userSeeds = require('./userSeeds.json');
 // const imageSeeds = require('./imageSeeds.json');
@@ -10,6 +11,7 @@ db.once('open', async () => {
     await User.create(userSeeds);
 
     
+
   } catch (err) {
     console.error(err);
     process.exit(1);

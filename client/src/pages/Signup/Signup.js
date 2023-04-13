@@ -1,8 +1,10 @@
-
+import SignupForm from "../../components/SignupForm";
 
 const Signup = () => {
     return (
-        <div>Signup</div>
+        <div className="has-background-info">
+            <SignupForm/>
+        </div>
     )
 }
 
