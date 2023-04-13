@@ -1,7 +1,7 @@
 const db = require('../config/connection');
 const { User, Post } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const imageSeeds = require('./imageSeeds.json');
+const postSeeds = require('./postSeeds.json');
 
 db.once('open', async () => {
   try {
@@ -9,11 +9,12 @@ db.once('open', async () => {
     await User.deleteMany({});
 
     await User.create(userSeeds);
-
-    for (let i = 0; i < imageSeeds.length; i++) {
-      const { _id, imageAuthor } = await Post.create(imageSeeds[i]);
+    await Post.create(postSeeds);
+/*
+    for (let i = 0; i < postSeeds.length; i++) {
+      const { _id, postAuthor } = await Post.create(postSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: imageAuthor },
+        { username: postAuthor },
         {
           $addToSet: {
             images: _id,
@@ -21,6 +22,7 @@ db.once('open', async () => {
         }
       );
     }
+    */
   } catch (err) {
     console.error(err);
     process.exit(1);
