@@ -1,4 +1,41 @@
+import React, { useState } from 'react';
+import Auth from '../../utils/auth'
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from "../../utils/mutations";
+
+
 const SignupForm = () => {
+    const [formState, setFormState] = useState({
+      username: '',
+      email: '',
+      password: '',
+    });
+
+    const [ addUser, {error}] = useMutation(ADD_USER)
+  
+    const handleChange = (event) => {
+      const {name, value} = event.target;
+
+      setFormState({
+        ...formState, [name]: value
+    });
+    };
+
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        // execute addUser mutation and pass in variable data from form
+        const { data } = await addUser({
+          variables: { ...formState }
+        });
+        Auth.login(data.addUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    
+
+
 
   return (
     <div>
@@ -6,7 +43,11 @@ const SignupForm = () => {
         <div class="columns is-centered ">
           <div class="column is-half">
             <div class="content mx-6 my-6">
-              <form class="box content signup-card">
+              <form class="box content signup-card"
+                onSubmit={handleFormSubmit}   
+               >
+               
+              
                 <h1 class="is-size-1 has-text-centered">Sign Up</h1>
                 
                 <div class="field">
@@ -16,7 +57,11 @@ const SignupForm = () => {
                       id="signupUsername"
                       class="input"
                       type="text"
-                      placeholder="Text input"
+                      placeholder="Username is required"
+                      required
+                      name="username"
+                      value={formState.username}
+                      onChange={handleChange}
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-user"></i>
@@ -31,7 +76,11 @@ const SignupForm = () => {
                       id="signupEmail"
                       class="input"
                       type="email"
-                      placeholder="Email input"
+                      placeholder="Email is required"
+                      required
+                      name="email"
+                      value={formState.email}
+                      onChange={handleChange}
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
@@ -46,7 +95,11 @@ const SignupForm = () => {
                       id="signupPwd"
                       class="input"
                       type="password"
-                      placeholder="Password input"
+                      placeholder="Password is required"
+                      required
+                      name="password"
+                      value={formState.password}
+                      onChange={handleChange}
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
@@ -56,11 +109,14 @@ const SignupForm = () => {
 
                 <div class="field has-text-centered">
                   <div class="control">
-                    <button id="signup" class="button is-link" type="submit">
+                    <button id="signup" class="button is-link" type="submit"
+                    
+                    >
                       Sign Up!
                     </button>
                   </div>
                 </div>
+                {error && <div>Signup Failed</div>}
               </form>
             </div>
           </div>

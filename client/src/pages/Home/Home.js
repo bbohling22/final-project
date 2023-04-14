@@ -1,11 +1,11 @@
 import React from "react";
-import Post from "../../components/Post";
+import Card from "../../components/Card";
 
 
 const Home = () => {
     return (
         <div className="container">
-            <Post />
+            <Card />
         </div>
     )
 }
