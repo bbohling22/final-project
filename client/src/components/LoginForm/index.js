@@ -1,4 +1,43 @@
+import React, { useState } from 'react';
+import Auth from '../../utils/auth'
+import { useQuery } from '@apollo/client';
+
 const LoginForm = () => {
+  // const [formState, setFormState] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  // });
+
+  // const [ addUser, {error}] = useMutation(ADD_USER)
+
+  // const handleChange = (event) => {
+  //   const {name, value} = event.target;
+
+  //   setFormState({
+  //     ...formState, [name]: value
+  // });
+  // };
+
+
+
+
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     // execute addUser mutation and pass in variable data from form
+  //     const { data } = await user({
+  //       variables: { ...formState }
+  //     });
+  //     Auth.login(data.addUser.token);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
+
+
+
+
   return (
     <div>
       <div class="container hero is-fullheight has-background-primary-dark is-fullhd  is-max-desktop">
