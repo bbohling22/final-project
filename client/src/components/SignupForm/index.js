@@ -11,7 +11,7 @@ const SignupForm = () => {
       password: '',
     });
 
-    const [ addUser, {error}] = useMutation(ADD_USER)
+    const [ addUser, {error, data}] = useMutation(ADD_USER)
   
     const handleChange = (event) => {
       const {name, value} = event.target;
@@ -43,6 +43,14 @@ const SignupForm = () => {
         <div class="columns is-centered ">
           <div class="column is-half">
             <div class="content mx-6 my-6">
+
+              
+            {data ? (
+              <p>
+                Success! You may now head{' '}
+                <link to="/">back to the homepage.</link>
+              </p>
+              ) : (
               <form class="box content signup-card"
                 onSubmit={handleFormSubmit}   
                >
@@ -116,9 +124,11 @@ const SignupForm = () => {
                     </button>
                   </div>
                 </div>
-                {error && <div>Signup Failed</div>}
+                
               </form>
+               )}
             </div>
+            {error && <div>Signup Failed</div>}
           </div>
         </div>
       </div>
