@@ -44,30 +44,19 @@ const Navbar = () => {
 
       <div id="navbarBasicExample" className="navbar-menu ">
         <div className="navbar-start">
-          <Link className="navbar-item has-text-white" to="/">
+          <Link className="navbar-item" to="/">
             Home
           </Link>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <Link className="navbar-item has-text-white " to="/Create">
+          
+          <Link className="navbar-item " to="/Create">
               Create
-            </Link>
-            {/* <div className="navbar-dropdown">
-              <Link className="navbar-item " to="/products/tshirts">
-                T-shirts
-              </Link>
-              <Link className="navbar-item" to="/products/sweaters">
-                Sweaters
-              </Link>
-              <Link className="navbar-item" to="/products/hats">
-                Hats
-              </Link>
-            </div> */}
-          </div>
+          </Link>
+          
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <Link className="navbar-link has-text-white" to="/about">
+            <h1 className="navbar-link" to="/about">
               About
-            </Link>
+            </h1>
 
             <div className="navbar-dropdown">
               <Link className="navbar-item " to="/about/company"></Link>
