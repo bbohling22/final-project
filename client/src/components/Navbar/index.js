@@ -72,8 +72,8 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <span class="icon has-text-success is-medium">
-            <i class="fa-solid fa-bag-shopping"></i>
+          <span className="icon has-text-success is-medium">
+            <i className="fa-solid fa-bag-shopping"></i>
           </span>
           <div className="navbar-item">
             <div className="buttons">
