@@ -1,0 +1,52 @@
+[
+  {
+    "postImage": "../../assets/pic1.jpg",
+    "postText": "alphabet-blocks",
+    "postAuthor": "bkernighan@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic2.jpg",
+    "postText": "bedtime-book",
+    "postAuthor": "mkanatalexander@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic3.jpg",
+    "postText": "camera",
+    "postAuthor": "wtls@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic4.jpg",
+    "postText": "canned-coffee",
+    "postAuthor": "kbeck@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic5.jpg",
+    "postText": "cookie-tin",
+    "postAuthor": "evberard@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic6.jpg",
+    "postText": "teddy-bear",
+    "postAuthor": "akay@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic7.jpg",
+    "postText": "plastic-horses",
+    "postAuthor": "choare@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic8.jpg",
+    "postText": "soap",
+    "postAuthor": "dthomas@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic9.jpg",
+    "postText": "spinning-top",
+    "postAuthor": "dknuth@techfriends.dev"
+  },
+  {
+    "postImage": "../../assets/pic1.jpg",
+    "postText": "tablet",
+    "postAuthor": "lernantino@techfriends.dev"
+  }
+]
