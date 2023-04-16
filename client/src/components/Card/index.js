@@ -15,51 +15,51 @@ const Card = () => {
         <div>
         <div class="columns is-clearfix m-6">
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image1}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image2}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image3}></img>
         </div>
         </div>
         </div>
         <div class="columns is-clearfix m-6">
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image4}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image5}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image6}></img>
         </div>
         </div>
         </div>
         <div class="columns is-clearix m-6">
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image7}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image8}></img>
         </div>
         </div>
         <div class="tile">
-        <div class="column" className="card">
+        <div class="column is-10" className="card">
             <img src={image9}></img>
         </div>
         </div>
