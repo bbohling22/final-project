@@ -13,54 +13,54 @@ const Card = () => {
    
     return (
         <div>
-        <div class="columns is-clearfix m-6">
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image1}></img>
+        <div className="columns is-clearfix m-6">
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image1} alt="batman slaps robin meme"></img>
         </div>
         </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image2}></img>
+        <div className="tile">
+        <div className="column is-10">
+            <img src={image2} alt="guy crying on the floor meme"></img>
         </div>
         </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image3}></img>
-        </div>
-        </div>
-        </div>
-        <div class="columns is-clearfix m-6">
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image4}></img>
-        </div>
-        </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image5}></img>
-        </div>
-        </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image6}></img>
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image3} alt="jealous girlfriend meme"></img>
         </div>
         </div>
         </div>
-        <div class="columns is-clearix m-6">
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image7}></img>
+        <div className="columns is-clearfix m-6">
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image4} alt="side eye monkey meme"></img>
         </div>
         </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image8}></img>
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image5} alt="mocking spongbob meme"></img>
         </div>
         </div>
-        <div class="tile">
-        <div class="column is-10" className="card">
-            <img src={image9}></img>
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image6} alt="this is fine meme"></img>
+        </div>
+        </div>
+        </div>
+        <div className="columns is-clearix m-6">
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image7} alt="sqidward glairs at spongbob meme"></img>
+        </div>
+        </div>
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image8} alt="push the right button meme"></img>
+        </div>
+        </div>
+        <div className="tile">
+        <div className="column is-10" class="card">
+            <img src={image9} alt="draw 25 uno meme"></img>
         </div>
         </div>
         </div>
