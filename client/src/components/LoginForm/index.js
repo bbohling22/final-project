@@ -1,39 +1,44 @@
 import React, { useState } from 'react';
 import Auth from '../../utils/auth'
-import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../../utils/mutations';
 
-const LoginForm = () => {
-  // const [formState, setFormState] = useState({
-  //   username: '',
-  //   email: '',
-  //   password: '',
-  // });
+const Login = () => {
+  const [formState, setFormState] = useState({
+    email: '',
+    password: '',
+  });
 
-  // const [ addUser, {error}] = useMutation(ADD_USER)
+  const [ login, {error,data}] = useMutation(LOGIN_USER)
 
-  // const handleChange = (event) => {
-  //   const {name, value} = event.target;
+  const handleChange = (event) => {
+    const {name, value} = event.target;
 
-  //   setFormState({
-  //     ...formState, [name]: value
-  // });
-  // };
-
-
+    setFormState({
+      ...formState, [name]: value
+  });
+  };
 
 
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     // execute addUser mutation and pass in variable data from form
-  //     const { data } = await user({
-  //       variables: { ...formState }
-  //     });
-  //     Auth.login(data.addUser.token);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      // execute addUser mutation and pass in variable data from form
+      const { data } = await login({
+        variables: { ...formState }
+      });
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
 
 
 
@@ -44,7 +49,14 @@ const LoginForm = () => {
         <div class="columns is-centered ">
           <div class="column is-half">
             <div class="content mx-6 my-6">
-              <form class="box py-6">
+            {data ? (
+              <p>
+                Success! You may now head{' '}
+                <link to="/">back to the homepage.</link>
+              </p>
+            ) : (
+
+              <form class="box py-6" onSubmit={handleFormSubmit}>
                 <div class="field">
                   <label class="label">Email</label>
                   <div class="control">
@@ -52,6 +64,9 @@ const LoginForm = () => {
                       class="input"
                       type="email"
                       placeholder="e.g. alex@example.com"
+                      name='email'
+                      value={formState.email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -63,12 +78,24 @@ const LoginForm = () => {
                       class="input"
                       type="password"
                       placeholder="********"
+                      name='password'
+                      value={formState.password}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
 
                 <button class="button is-primary">Log In</button>
               </form>
+               )}
+
+                {error && (
+                  <div className="my-3 p-3 bg-danger text-white">
+                    {error.message}
+                  </div>
+                )}
+
+
             </div>
           </div>
         </div>
@@ -77,4 +104,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;
